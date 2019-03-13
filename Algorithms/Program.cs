@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Algorithms
@@ -10,12 +12,46 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
             Console.WriteLine("Hello World!");
+            //ParallelForTest();
+            TaskTest();
+            //SpawnTest();
             Console.ReadKey();
+        }
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+        static void ParallelForTest()
+        {
+            Parallel.For(0, 100000, (i) =>
+            {
+                var a = i + 1;
+                Console.WriteLine("run " + Process.GetCurrentProcess().Threads.Count);
+            });
+        }
+
+        static void TaskTest()
+        {
+            Task.Run(() => WorkLoad("A"));
+            Task.Run(() => WorkLoad("B"));
+            Task.Run(() => WorkLoad("C"));
+            Task.Run(() => WorkLoad("D"));
+        }
+
+        static void SpawnTest()
+        {
+            (new Thread(() => WorkLoad("A"))).Start();
+            (new Thread(() => WorkLoad("B"))).Start();
+            (new Thread(() => WorkLoad("C"))).Start();
+            (new Thread(() => WorkLoad("D"))).Start();
+        }
+
+        static void WorkLoad(string name)
+        {
+            while (true)
+            {
+                var a = 1 + 1;
+                Console.WriteLine("run " + Process.GetCurrentProcess().Threads.Count + " " + Thread.CurrentThread.ManagedThreadId);
+                Thread.Sleep(1000);
+            }
         }
     }
 }
