@@ -12,46 +12,21 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            //ParallelForTest();
-            TaskTest();
-            //SpawnTest();
+            Console.WriteLine("Start Main");
             Console.ReadKey();
         }
 
-        static void ParallelForTest()
+        private void TreeCuttingAlgoTest()
         {
-            Parallel.For(0, 100000, (i) =>
-            {
-                var a = i + 1;
-                Console.WriteLine("run " + Process.GetCurrentProcess().Threads.Count);
-            });
+            var treeCutting = new TreeCuttingAlgo();
+            treeCutting.Execute(inputSize: 30000);
         }
 
-        static void TaskTest()
+        private void ParallelSpawnTasksTest()
         {
-            Task.Run(() => WorkLoad("A"));
-            Task.Run(() => WorkLoad("B"));
-            Task.Run(() => WorkLoad("C"));
-            Task.Run(() => WorkLoad("D"));
-        }
-
-        static void SpawnTest()
-        {
-            (new Thread(() => WorkLoad("A"))).Start();
-            (new Thread(() => WorkLoad("B"))).Start();
-            (new Thread(() => WorkLoad("C"))).Start();
-            (new Thread(() => WorkLoad("D"))).Start();
-        }
-
-        static void WorkLoad(string name)
-        {
-            while (true)
-            {
-                var a = 1 + 1;
-                Console.WriteLine("run " + Process.GetCurrentProcess().Threads.Count + " " + Thread.CurrentThread.ManagedThreadId);
-                Thread.Sleep(1000);
-            }
+            ParallelSpawnTasks.ParallelForTest();
+            ParallelSpawnTasks.TaskTest();
+            ParallelSpawnTasks.SpawnTest();
         }
     }
 }
