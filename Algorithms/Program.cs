@@ -17,7 +17,7 @@ namespace Algorithms
             while (true)
             {
                 Console.WriteLine("Try Again?");
-                RunPrintPatternSolution();
+                RunHappyRankSolution();
             }
         }
 
@@ -39,6 +39,15 @@ namespace Algorithms
         {
             var size = Console.ReadLine();
             PrintPatternSolution.Run(int.Parse(size));
+        }
+
+        private static void RunHappyRankSolution()
+        {
+            //input
+            //line 1: happy rank threshold
+            //line 2: total count of questions
+            //next lines : happy ranks array
+            HappyRankSolution.Run();
         }
         #endregion
 
