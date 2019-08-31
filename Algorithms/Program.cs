@@ -17,7 +17,7 @@ namespace Algorithms
             while (true)
             {
                 Console.WriteLine("Try Again?");
-                RunJumpOnCloud();
+                RunPrintPatternSolution();
             }
         }
 
@@ -33,6 +33,12 @@ namespace Algorithms
             ParallelSpawnTasks.ParallelForTest();
             ParallelSpawnTasks.TaskTest();
             ParallelSpawnTasks.SpawnTest();
+        }
+
+        private static void RunPrintPatternSolution()
+        {
+            var size = Console.ReadLine();
+            PrintPatternSolution.Run(int.Parse(size));
         }
         #endregion
 
@@ -50,6 +56,17 @@ namespace Algorithms
         private static void RunJumpOnCloud()
         {
             JumpOnCloudsSolution.Run();
+        }
+        private static void RunRepeatedString()
+        {
+            RepeatedStringSolution.Run();
+        }
+        #endregion
+
+        #region Arrays
+        public void Run()
+        {
+
         }
         #endregion
 

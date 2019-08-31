@@ -43,8 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HackerRank\WarmUp\JumpOnCloudsSolution.cs" />
+    <Compile Include="HackerRank\WarmUp\RepeatedStringSolution.cs" />
     <Compile Include="HackerRank\WarmUp\ValeyCountSolution.cs" />
     <Compile Include="ParallelSpawnTasks.cs" />
+    <Compile Include="PrintPatternSolution.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HackerRank\WarmUp\SockMerchant.cs" />
