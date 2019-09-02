@@ -1,3 +1,4 @@
+using Algorithms.HackerRank.Arrays;
 using Algorithms.HackerRank.WarmUp;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace Algorithms
             while (true)
             {
                 Console.WriteLine("Try Again?");
-                RunHappyRankSolution();
+                RunArrayManipulationSolution();
             }
         }
 
@@ -73,9 +74,9 @@ namespace Algorithms
         #endregion
 
         #region Arrays
-        public void Run()
+        private static void RunArrayManipulationSolution()
         {
-
+            ArrayManipulationSolution.Run();
         }
         #endregion
 

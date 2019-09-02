@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HackerRank\Arrays\ArrayManipulationSolution.cs" />
     <Compile Include="HackerRank\WarmUp\JumpOnCloudsSolution.cs" />
     <Compile Include="HackerRank\WarmUp\RepeatedStringSolution.cs" />
     <Compile Include="HackerRank\WarmUp\ValeyCountSolution.cs" />
