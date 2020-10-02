@@ -18,7 +18,7 @@ namespace Algorithms
             while (true)
             {
                 Console.WriteLine("Try Again?");
-                RunArrayManipulationSolution();
+                RunHourGlassSolution();
             }
         }
 
@@ -77,6 +77,11 @@ namespace Algorithms
         private static void RunArrayManipulationSolution()
         {
             ArrayManipulationSolution.Run();
+        }
+
+        private static void RunHourGlassSolution()
+        {
+            HourGlasses.Run();
         }
         #endregion
 
