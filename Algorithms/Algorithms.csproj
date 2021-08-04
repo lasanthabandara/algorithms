@@ -44,6 +44,9 @@
   <ItemGroup>
     <Compile Include="HackerRank\Arrays\HourGlasses.cs" />
     <Compile Include="HackerRank\Arrays\ArrayManipulationSolution.cs" />
+    <Compile Include="HackerRank\Dictionaries\TwoStrings.cs" />
+    <Compile Include="HackerRank\Find\IceCreamParlor.cs" />
+    <Compile Include="HackerRank\Sort\MarkAndToys.cs" />
     <Compile Include="HackerRank\WarmUp\JumpOnCloudsSolution.cs" />
     <Compile Include="HackerRank\WarmUp\RepeatedStringSolution.cs" />
     <Compile Include="HackerRank\WarmUp\ValeyCountSolution.cs" />
@@ -58,5 +61,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,6 @@
 using Algorithms.HackerRank.Arrays;
+using Algorithms.HackerRank.Dictionaries;
+using Algorithms.HackerRank.Find;
 using Algorithms.HackerRank.WarmUp;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,7 @@ namespace Algorithms
             while (true)
             {
                 Console.WriteLine("Try Again?");
-                RunHourGlassSolution();
+                RunIceCreamParlor();
             }
         }
 
@@ -82,6 +84,27 @@ namespace Algorithms
         private static void RunHourGlassSolution()
         {
             HourGlasses.Run();
+        }
+        #endregion
+
+        #region Dictionaries
+        private static void RunTwoStrings()
+        {
+            TwoStrings.Run();
+        }
+        #endregion
+
+        #region Sort
+        private static void RunMarkAndToys()
+        {
+            TwoStrings.Run();
+        }
+        #endregion
+
+        #region Find
+        private static void RunIceCreamParlor()
+        {
+            IceCreamParlor.Run();
         }
         #endregion
 
