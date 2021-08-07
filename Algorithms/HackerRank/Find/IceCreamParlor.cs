@@ -24,19 +24,52 @@ namespace Algorithms.HackerRank.Find
             }
         }
 
-        public static void whatFlavors(List<int> cost, int money)
+        private static void whatFlavors(List<int> cost, int money)
         {
             var size = cost.Count;
-            for (int i = 0; i < size - 1; i++)
+            var map = new Dictionary<int, int>();
+            for (int i = 0; i < size; i++)
             {
-                for(int j = 1 + i; j < size - 1; j++)
+                if (map.ContainsKey(cost[i]))
                 {
-                    if (money == cost[i] + cost[j])
+                    map[cost[i]]++;
+                }
+                else { map[cost[i]] = 1; }
+            }
+            for (int i = 0; i < size; i++)
+            {
+                var v1 = cost[i];
+                var v2 = money - cost[i];
+                if (v1 != v2)
+                {
+                    if (map.ContainsKey(v2) && map[v1] != 0 && map[v2] != 0)
                     {
-                        Console.WriteLine(++i + " " + (++j));
+                        Print(cost.IndexOf(v1), cost.IndexOf(v2));
                         break;
                     }
                 }
+                else
+                {
+                    if (map[v1] > 1)
+                    {
+                        var index1 = cost.IndexOf(v1);
+                        var index2 = cost.IndexOf(v1, index1 + 1);
+                        Print(index1, index2);
+                        break;
+                    }
+                }
+            }
+        }
+
+        private static void Print(int v1, int v2)
+        {
+            if (v2 > v1)
+            {
+                Console.WriteLine(++v1 + " " + (++v2));
+            }
+            else
+            {
+                Console.WriteLine(++v2 + " " + (++v1));
             }
         }
     }
