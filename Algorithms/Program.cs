@@ -1,6 +1,7 @@
 using Algorithms.HackerRank.Arrays;
 using Algorithms.HackerRank.Dictionaries;
 using Algorithms.HackerRank.Find;
+using Algorithms.HackerRank.Misc;
 using Algorithms.HackerRank.WarmUp;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace Algorithms
             while (true)
             {
                 Console.WriteLine("Try Again?");
-                RunIceCreamParlor();
+                RunFruitPromotion();
             }
         }
 
@@ -105,6 +106,17 @@ namespace Algorithms
         private static void RunIceCreamParlor()
         {
             IceCreamParlor.Run();
+        }
+        #endregion
+
+        #region Misc
+        private static void RunWordSuggestions()
+        {
+            WordSuggestions.Run();
+        }
+        private static void RunFruitPromotion()
+        {
+            FruitPromotion.Run();
         }
         #endregion
 
