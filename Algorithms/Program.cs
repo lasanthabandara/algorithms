@@ -21,7 +21,7 @@ namespace Algorithms
             while (true)
             {
                 Console.WriteLine("Try Again?");
-                RunFruitPromotion();
+                RunVehicleChoice();
             }
         }
 
@@ -117,6 +117,14 @@ namespace Algorithms
         private static void RunFruitPromotion()
         {
             FruitPromotion.Run();
+        }
+        private static void RunCountAnalogus()
+        {
+            CountAnalogus.Run();
+        }
+        private static void RunVehicleChoice()
+        {
+            VehicleChoice.Run();
         }
         #endregion
 

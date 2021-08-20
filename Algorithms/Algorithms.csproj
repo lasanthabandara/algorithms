@@ -46,7 +46,9 @@
     <Compile Include="HackerRank\Arrays\ArrayManipulationSolution.cs" />
     <Compile Include="HackerRank\Dictionaries\TwoStrings.cs" />
     <Compile Include="HackerRank\Find\IceCreamParlor.cs" />
+    <Compile Include="HackerRank\Misc\CountAnalogus.cs" />
     <Compile Include="HackerRank\Misc\FruitPromotion.cs" />
+    <Compile Include="HackerRank\Misc\VehicleChoice.cs" />
     <Compile Include="HackerRank\Misc\WordSuggestions.cs" />
     <Compile Include="HackerRank\Sort\MarkAndToys.cs" />
     <Compile Include="HackerRank\WarmUp\JumpOnCloudsSolution.cs" />
